@@ -2,7 +2,6 @@ package cn.zhudi.mvpdemo.mvp.presenter;
 
 import android.content.Context;
 
-import cn.zhudi.mvpdemo.R;
 import cn.zhudi.mvpdemo.base.BasePresenter;
 import cn.zhudi.mvpdemo.entity.User;
 import cn.zhudi.mvpdemo.impl.OnRequestListener;
