@@ -1,9 +1,25 @@
+# Ignore gradle files
+.gradle/
+
+# Intellij project files
 *.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-/captures
-.externalNativeBuild
+*.ipr
+*.iws
+.idea/
+
+build/*
+*/build/*
+
+# Local configuration module.cloud.file (sdk path, etc)
+local.properties
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+*.apk
+ReleaseKey
+*ServerConfig.java
+
