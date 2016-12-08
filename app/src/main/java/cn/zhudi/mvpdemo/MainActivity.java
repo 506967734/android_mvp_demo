@@ -11,18 +11,13 @@ import cn.zhudi.mvpdemo.mvp.view.MainView;
 public class MainActivity extends BaseMVPActivity<MainView, MainPresenter> implements MainView {
 
     @Override
-    protected MainPresenter initPresenter() {
-        return new MainPresenter(this);
-    }
-
-    @Override
     protected int getLayoutView() {
         return R.layout.activity_main;
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected MainPresenter initPresenter() {
+        return new MainPresenter(this);
     }
 
     @Override
@@ -36,5 +31,11 @@ public class MainActivity extends BaseMVPActivity<MainView, MainPresenter> imple
     @Override
     public void showVersion(String version) {
         tv.setText(version);
+    }
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 }

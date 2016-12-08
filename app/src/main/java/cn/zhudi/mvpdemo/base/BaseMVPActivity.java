@@ -29,12 +29,14 @@ public abstract class BaseMVPActivity<V, T extends BasePresenter<V>> extends Bas
     /**
      * 初始化View
      */
-    protected void initView(){}
+    protected void initView() {
+    }
 
     /**
      * 初始化Data
      */
-    protected void initData(){}
+    protected void initData() {
+    }
 
 
     @Override
@@ -49,12 +51,32 @@ public abstract class BaseMVPActivity<V, T extends BasePresenter<V>> extends Bas
     @Override
     public void onResume() {
         super.onResume();
+        //如果presenter为空的时候，我们需要重新初始化presenter
+        if (presenter == null) {
+            presenter = initPresenter();
+            presenter.attach((V) this);
+        }
+    }
+
+    /**
+     * 恢复界面后,我们需要判断我们的presenter是不是存在,不存在则重置presenter
+     *
+     * @param savedInstanceState
+     */
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if (presenter == null) {
+            presenter = initPresenter();
+            presenter.attach((V) this);
+        }
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         presenter.dettach();
+        presenter = null;
     }
 
 

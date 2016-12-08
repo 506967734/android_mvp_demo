@@ -2,6 +2,7 @@ package cn.zhudi.mvpdemo.ui;
 
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -41,10 +42,12 @@ public class LoginActivity extends BaseMVPActivity<LoginView, LoginPresenter> im
         presenter.login(getUserName(), getUserPassword());
     }
 
+    @Bind(R.id.tvShow)
+    TextView tvShow;
     @Override
     public void loginSuccess(User data) {
+        tvShow.setText("success");
         startSelfActivity(this, MainActivity.class);
-        finish();
     }
 
     @Bind(R.id.etUserName)
