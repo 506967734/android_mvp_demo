@@ -1,4 +1,4 @@
-include ':app', ':mylibrary'
+include ':app', ':mylibrary',':LoadingViewLibrary'
 
 //初始化gradle时调用
 def initGradleEnvironment() {
