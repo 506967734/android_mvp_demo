@@ -66,8 +66,13 @@
 -dontwarn android.support.test.**
 -dontwarn org.junit.**
 
-#json数据解析
+#gson
 -keep public class **.*Model*.** {*;}
+# JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)
+-keep class * implements com.google.gson.TypeAdapterFactory
+-keep class * implements com.google.gson.JsonSerializer
+-keep class * implements com.google.gson.JsonDeserializer
+##---------------End: proguard configuration for Gson  ----------
 
 #butterKnife
 -keep class butterknife.** { *; }
@@ -81,3 +86,7 @@
 -keepclasseswithmembernames class * {
     @butterknife.* <methods>;
 }
+
+#android-async-http
+-keep class cz.msebera.android.httpclient.** { *; }
+-keep class com.loopj.android.http.** { *; }

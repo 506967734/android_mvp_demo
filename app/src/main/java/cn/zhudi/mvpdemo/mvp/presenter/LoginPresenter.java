@@ -35,7 +35,7 @@ public class LoginPresenter extends BasePresenter<LoginView> {
             }
 
             @Override
-            public void onFailed(String msg) {
+            public void onFailed(int code, String msg) {
                 mView.showMessage(msg);
             }
         });

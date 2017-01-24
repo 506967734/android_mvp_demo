@@ -39,7 +39,8 @@ public class LoginActivity extends BaseMVPActivity<LoginView, LoginPresenter> im
 
     @OnClick(R.id.btnLogin)
     public void loginClick() {
-        presenter.login(getUserName(), getUserPassword());
+        //presenter.login(getUserName(), getUserPassword());
+        startSelfActivity(this, MainActivity.class);
     }
 
     @Bind(R.id.tvShow)
