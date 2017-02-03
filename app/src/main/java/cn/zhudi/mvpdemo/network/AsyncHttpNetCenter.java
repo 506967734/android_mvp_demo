@@ -22,7 +22,7 @@ public class AsyncHttpNetCenter {
     public static final int GET = 1;
     public static final int POST = 2;
     // 连接超时时间
-    static final int CONNECT_TIMEOUT = 10 * 1000;
+    static final int CONNECT_TIMEOUT = 5 * 1000;
     // 最大连接数
     static final int MAX_CONNECTIONS = 1;
     // 失败重连次数
