@@ -65,7 +65,6 @@ public class DebugLog {
     public static void d(String message) {
         if (!isDebuggable())
             return;
-
         getMethodNames(new Throwable().getStackTrace());
         Log.d(className, createLog(message));
 //        if (MYLOG_WRITE_TO_FILE)
@@ -96,5 +95,4 @@ public class DebugLog {
         getMethodNames(new Throwable().getStackTrace());
         Log.wtf(className, createLog(message));
     }
-
 }
