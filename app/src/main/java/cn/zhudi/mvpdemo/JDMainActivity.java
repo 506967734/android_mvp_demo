@@ -18,7 +18,7 @@ public class JDMainActivity extends FragmentActivity {
     /**
      * 表示显示第几个标签
      */
-    private int currentTab = 1;
+    private int currentTab = 0;
     public List<BaseFragment> fragments;
 
     @Override

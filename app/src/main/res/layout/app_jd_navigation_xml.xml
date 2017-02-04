@@ -22,26 +22,23 @@
             android:id="@+id/ivHome"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginTop="20dip"
-            android:src="@drawable/main_bottom_tab_home_focus"/>
+            android:layout_weight="1"/>
         <!--android:src="@drawable/main_bottom_tab_category_normal"-->
         <!--android:src="@drawable/axa"-->
         <ImageView
             android:id="@+id/ivCategory"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginTop="20dip"
-            android:src="@drawable/main_bottom_tab_category_normal"/>
+            android:layout_weight="1"/>
         <!--android:src="@drawable/main_bottom_tab_faxian_normal"-->
         <!--android:src="@drawable/axc"-->
         <ImageView
             android:id="@+id/ivFaxian"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/main_bottom_tab_faxian_normal"/>
+            android:layout_weight="1"/>
         <!--android:src="@drawable/main_bottom_tab_cart_normal"-->
         <!--android:src="@drawable/axe"-->
         <ImageView
@@ -49,8 +46,7 @@
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
-            android:layout_weight="1"
-            android:src="@drawable/main_bottom_tab_cart_normal"/>
+            android:layout_weight="1"/>
         <!--android:src="@drawable/main_bottom_tab_personal_normal"-->
         <!--android:src="@drawable/axi"-->
         <ImageView
@@ -58,9 +54,7 @@
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
-            android:layout_weight="1"
-            android:src="@drawable/main_bottom_tab_personal_normal"
-        />
+            android:layout_weight="1"/>
     </LinearLayout>
     <!--<HorizontalScrollView-->
     <!--android:id="@+id/bottomBar"-->

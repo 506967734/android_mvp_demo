@@ -90,3 +90,13 @@
 #android-async-http
 -keep class cz.msebera.android.httpclient.** { *; }
 -keep class com.loopj.android.http.** { *; }
+
+#glide
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
+}
+
+# for DexGuard only
+#-keep resourcexmlelements manifest/application/meta-data@value=GlideModule
